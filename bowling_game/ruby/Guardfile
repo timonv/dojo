@@ -1,0 +1,10 @@
+# A sample Guardfile
+# More info at https://github.com/guard/guard#readme
+
+#guard :test do
+  #watch(/.+\.rb/)  { "test" }
+#end
+
+guard :shell do
+  watch(/.+\.rb/) { `ruby -Ie bowling_game_test.rb` }
+end
